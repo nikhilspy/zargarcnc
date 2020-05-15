@@ -1,9 +1,9 @@
 <?php
 //variable setting
-$name = $_REQUEST['Your Name'];
-$email = $_REQUEST['Your Email'];
-$subject = $_REQUEST['Subject'];
-$message = $_REQUEST['Message'];
+$name = $_REQUEST['name'];
+$email = $_REQUEST['email'];
+$subject = $_REQUEST['subject'];
+$message = $_REQUEST['message'];
 
 //check input fields
 if (emplty($name)|| empty($email)||empty($message))
@@ -12,7 +12,7 @@ if (emplty($name)|| empty($email)||empty($message))
 }
 else
 {
-    mail("Zargarcnc@gmail.com", "Zargar Cnc Message",$message,"From:$name<$email><$subject>");
+    mail("zargarcnc@gmail.com", "Zargar Cnc Message",$message,"From:$name<$email><$subject>");
     echo "<script type='text/javascript'>alert('Your Message Sent Successfully'); 
     window.history.log(-1);</script>"; 
 }
